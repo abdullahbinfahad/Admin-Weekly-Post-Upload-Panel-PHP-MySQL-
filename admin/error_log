@@ -1,0 +1,182 @@
+[04-Jun-2025 19:57:38 UTC] PHP Warning:  require(../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:57:38 UTC] PHP Warning:  require(../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:57:38 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:57:40 UTC] PHP Warning:  require(../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:57:40 UTC] PHP Warning:  require(../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:57:40 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:57:41 UTC] PHP Warning:  require(../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:57:41 UTC] PHP Warning:  require(../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:57:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:59:04 UTC] PHP Warning:  require(../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:59:04 UTC] PHP Warning:  require(../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:59:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:59:06 UTC] PHP Warning:  require(../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:59:06 UTC] PHP Warning:  require(../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:59:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:59:38 UTC] PHP Warning:  require(../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:59:38 UTC] PHP Warning:  require(../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 19:59:38 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 8
+[04-Jun-2025 20:02:36 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:02:36 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:02:36 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:02:37 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:02:37 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:02:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:02:38 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:02:38 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:02:38 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:02:58 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:02:58 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:02:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:05:43 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:05:43 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:05:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:05:44 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:05:44 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:05:44 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:05:45 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:05:45 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:05:45 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:27 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:27 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:29 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:29 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:29 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:29 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:29 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:29 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:50 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:50 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:10:50 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:11:42 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:11:42 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[04-Jun-2025 20:11:42 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[05-Jun-2025 04:38:56 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[05-Jun-2025 04:38:56 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[05-Jun-2025 04:38:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[05-Jun-2025 04:38:57 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[05-Jun-2025 04:38:57 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[05-Jun-2025 04:38:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[05-Jun-2025 04:38:59 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[05-Jun-2025 04:38:59 UTC] PHP Warning:  require(/home/abdullah/public_html/University/admin/../includes/db_connect.php): Failed to open stream: Permission denied in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[05-Jun-2025 04:38:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/abdullah/public_html/University/admin/../includes/db_connect.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/abdullah/public_html/University/admin/add-post.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/abdullah/public_html/University/admin/add-post.php on line 12
+[05-Jun-2025 04:55:16 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 04:55:20 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 04:55:24 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 04:55:56 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 04:55:58 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 05:08:26 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 05:08:30 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 05:26:12 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:26:14 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:26:15 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:26:16 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:26:16 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:26:16 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:26:17 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:26:17 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:26:17 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:26:17 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:26:18 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:27:12 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 05:35:35 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 05:35:37 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 05:35:40 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 05:35:41 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 05:35:42 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 05:35:49 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:35:51 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:35:52 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:35:52 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:35:52 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:35:52 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:35:53 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:35:53 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:35:53 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:37:25 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:37:27 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:37:28 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:47:01 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:47:03 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:47:04 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:50:00 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:50:01 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:50:02 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 05:50:06 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 08:03:28 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 08:04:07 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 08:04:09 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 10:26:49 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 11:09:12 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19
+[05-Jun-2025 11:09:18 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'abdullah_wp63'@'localhost' (using password: YES)
+[05-Jun-2025 11:19:06 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/abdullah/public_html/University/admin/add-post.php on line 19

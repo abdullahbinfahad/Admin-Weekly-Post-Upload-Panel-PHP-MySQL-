@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Post Script Troubleshooter</title>
+    <style>
+        :root {
+            --primary: #3498db;
+            --danger: #e74c3c;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        
+        h1, h2, h3 {
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary);
+            margin-bottom: 30px;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 15px 0;
+            position: relative;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .btn-danger {
+            background: var(--danger);
+        }
+        
+        .btn-danger:hover {
+            background: #c0392b;
+        }
+        
+        .btn-success {
+            background: var(--success);
+        }
+        
+        .btn-success:hover {
+            background: #27ae60;
+        }
+        
+        .btn-warning {
+            background: var(--warning);
+        }
+        
+        .btn-warning:hover {
+            background: #d35400;
+        }
+        
+        .tab-container {
+            margin-top: 20px;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #f1f1f1;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+        }
+        
+        .tab.active {
+            background: white;
+            border-bottom: 1px solid white;
+            margin-bottom: -1px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .debug-output {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .status-good {
+            background: var(--success);
+        }
+        
+        .status-bad {
+            background: var(--danger);
+        }
+        
+        .status-warning {
+            background: var(--warning);
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .note {
+            background: #fff9e6;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .error-details {
+            background: #ffebee;
+            border-left: 4px solid var(--danger);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .success-details {
+            background: #e8f5e9;
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .test-form {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="card">
+                <h1>Save Post Script Troubleshooter</h1>
+                <p>HTTP 500 errors occur when there's a server-side problem with your PHP script. This tool will help you diagnose and fix issues with your <code>save_post.php</code> script.</p>
+                
+                <div class="error-details">
+                    <h3><span class="status-indicator status-bad"></span>Common Causes of HTTP 500 Errors</h3>
+                    <ul>
+                        <li>Syntax errors in PHP code</li>
+                        <li>Incorrect file permissions</li>
+                        <li>Missing required files or dependencies</li>
+                        <li>Database connection issues</li>
+                        <li>Insufficient memory or execution time</li>
+                        <li>Undefined functions or variables</li>
+                    </ul>
+                </div>
+                
+                <h2>Diagnosis Steps</h2>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Enable Error Reporting</h3>
+                        <p>Add these lines at the top of your <code>save_post.php</code> to display errors:</p>
+                        <div class="code-block">
+                            &lt;?php
+                            ini_set('display_errors', 1);
+                            ini_set('display_startup_errors', 1);
+                            error_reporting(E_ALL);
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Check File Permissions</h3>
+                        <p>Ensure your PHP files have proper permissions (644 for files, 755 for directories):</p>
+                        <div class="code-block">
+                            # Set proper permissions
+                            chmod 644 save_post.php
+                            chmod 755 includes/
+                            chmod 755 uploads/
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Verify Database Connection</h3>
+                        <p>Create a test script to check database connectivity:</p>
+                        <div class="code-block">
+                            &lt;?php
+                            require __DIR__ . '/../includes/db_connect.php';
+                            
+                            try {
+                                $stmt = $conn->query("SELECT 1");
+                                echo "Database connection successful!";
+                            } catch (PDOException $e) {
+                                die("Connection failed: " . $e->getMessage());
+                            }
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Check Server Error Logs</h3>
+                        <p>Locate your server error logs for detailed information:</p>
+                        <div class="code-block">
+                            # Common log locations:
+                            /var/log/apache2/error.log
+                            /var/log/nginx/error.log
+                            /home/username/logs/error_log
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Complete save_post.php Implementation</h2>
+                <p>Here's a robust implementation with enhanced error handling:</p>
+                
+                <div class="tab-container">
+                    <div class="tabs">
+                        <div class="tab active" onclick="openTab(event, 'php-code')">PHP Code</div>
+                        <div class="tab" onclick="openTab(event, 'sql-code')">SQL Schema</div>
+                    </div>
+                    
+                    <div id="php-code" class="tab-content active">
+                        <div class="code-block">
+&lt;?php
+// Enable error reporting
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Start session
+session_start();
+
+// Verify authentication
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header('HTTP/1.1 401 Unauthorized');
+    die('{"status":"error","message":"Please login first!"}');
+}
+
+// Database configuration
+$host = 'localhost';
+$dbname = 'university_db';
+$username = 'db_user';
+$password = 'secure_password';
+
+// Create PDO connection
+try {
+    $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
+    $options = [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES => false,
+    ];
+    $conn = new PDO($dsn, $username, $password, $options);
+} catch (PDOException $e) {
+    error_log("Database connection failed: " . $e->getMessage());
+    header('HTTP/1.1 500 Internal Server Error');
+    die('{"status":"error","message":"Database connection error"}');
+}
+
+// Helper functions
+function sanitize_input($data) {
+    return htmlspecialchars(strip_tags(trim($data)), ENT_QUOTES, 'UTF-8');
+}
+
+function sanitize_filename($name) {
+    return preg_replace("/[^a-zA-Z0-9_.-]/", '_', basename($name));
+}
+
+function validate_upload($file, $allowed_extensions) {
+    $max_size = 20 * 1024 * 1024; // 20MB
+    $errors = [];
+    
+    // Check upload errors
+    if ($file['error'] !== UPLOAD_ERR_OK) {
+        $errors[] = "Upload error code: " . $file['error'];
+        return $errors;
+    }
+    
+    // Check file size
+    if ($file['size'] > $max_size) {
+        $errors[] = "File exceeds 20MB limit";
+    }
+    
+    // Check file extension
+    $file_ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+    if (!in_array($file_ext, $allowed_extensions)) {
+        $errors[] = "Invalid file type. Allowed: " . implode(', ', $allowed_extensions);
+    }
+    
+    return $errors;
+}
+
+// Process form data
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('HTTP/1.1 405 Method Not Allowed');
+    die('{"status":"error","message":"Invalid request method"}');
+}
+
+// Validate required fields
+$required = ['title', 'category', 'content_type', 'week'];
+foreach ($required as $field) {
+    if (empty($_POST[$field])) {
+        header('HTTP/1.1 400 Bad Request');
+        die('{"status":"error","message":"Missing required field: ' . $field . '"}');
+    }
+}
+
+// Sanitize input
+$title = sanitize_input($_POST['title']);
+$category = sanitize_input($_POST['category']);
+$week = (int)$_POST['week'];
+$content_type = $_POST['content_type'];
+
+// Validate week number
+if ($week < 1 || $week > 52) {
+    header('HTTP/1.1 400 Bad Request');
+    die('{"status":"error","message":"Invalid week number"}');
+}
+
+// Content processing
+$content = '';
+$file_path = '';
+
+if ($content_type === 'text') {
+    $content = sanitize_input($_POST['content'] ?? '');
+} elseif ($content_type === 'video') {
+    $content = filter_var($_POST['video_url'] ?? '', FILTER_VALIDATE_URL);
+    if (!$content) {
+        header('HTTP/1.1 400 Bad Request');
+        die('{"status":"error","message":"Invalid video URL format"}');
+    }
+} else {
+    // File upload handling
+    $allowed_types = [
+        'presentation' => ['ppt', 'pptx', 'pdf'],
+        'excel' => ['xls', 'xlsx', 'csv'],
+        'homework' => ['doc', 'docx', 'pdf', 'txt']
+    ];
+    
+    if (!isset($_FILES['file']) || $_FILES['file']['error'] !== UPLOAD_ERR_OK) {
+        header('HTTP/1.1 400 Bad Request');
+        die('{"status":"error","message":"File upload error"}');
+    }
+    
+    $file = $_FILES['file'];
+    $errors = validate_upload($file, $allowed_types[$content_type]);
+    
+    if (!empty($errors)) {
+        header('HTTP/1.1 400 Bad Request');
+        die('{"status":"error","message":"' . implode("\\n", $errors) . '"}');
+    }
+    
+    // Prepare upload directory
+    $upload_dir = __DIR__ . '/../uploads/';
+    if (!file_exists($upload_dir)) {
+        if (!mkdir($upload_dir, 0755, true)) {
+            error_log("Failed to create upload directory: $upload_dir");
+            header('HTTP/1.1 500 Internal Server Error');
+            die('{"status":"error","message":"Failed to create upload directory"}');
+        }
+    }
+    
+    // Generate safe filename
+    $file_ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+    $file_name = uniqid() . '_' . sanitize_filename($file['name']);
+    $target_path = $upload_dir . $file_name;
+    
+    // Move uploaded file
+    if (!move_uploaded_file($file['tmp_name'], $target_path)) {
+        error_log("File move failed: {$file['tmp_name']} to $target_path");
+        header('HTTP/1.1 500 Internal Server Error');
+        die('{"status":"error","message":"File upload failed"}');
+    }
+    
+    $file_path = '/University/uploads/' . $file_name;
+}
+
+// Save to database
+try {
+    $stmt = $conn->prepare("INSERT INTO posts (title, category, content_type, content, file_path, week_number, created_at) 
+                            VALUES (:title, :category, :ctype, :content, :fpath, :week, NOW())");
+    
+    $stmt->execute([
+        ':title' => $title,
+        ':category' => $category,
+        ':ctype' => $content_type,
+        ':content' => $content,
+        ':fpath' => $file_path,
+        ':week' => $week
+    ]);
+    
+    // Success response
+    header('Content-Type: application/json');
+    echo json_encode(['status' => 'success', 'message' => 'Post saved successfully']);
+    exit;
+
+} catch(PDOException $e) {
+    error_log("Database Error: " . $e->getMessage());
+    header('HTTP/1.1 500 Internal Server Error');
+    die('{"status":"error","message":"Database error saving post"}');
+}
+?&gt;
+                        </div>
+                    </div>
+                    
+                    <div id="sql-code" class="tab-content">
+                        <div class="code-block">
+-- Database: university_db
+CREATE DATABASE IF NOT EXISTS `university_db` 
+DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE `university_db`;
+
+-- Table structure for posts
+CREATE TABLE IF NOT EXISTS `posts` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(255) NOT NULL,
+  `category` VARCHAR(50) NOT NULL,
+  `content_type` VARCHAR(20) NOT NULL,
+  `content` TEXT,
+  `file_path` VARCHAR(255) DEFAULT NULL,
+  `week_number` TINYINT(2) NOT NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `week_number` (`week_number`),
+  KEY `category` (`category`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Create database user and grant privileges
+CREATE USER 'db_user'@'localhost' IDENTIFIED BY 'secure_password';
+GRANT ALL PRIVILEGES ON university_db.* TO 'db_user'@'localhost';
+FLUSH PRIVILEGES;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <div class="card">
+                <h2>Test Your Configuration</h2>
+                <p>Simulate a form submission to test your save_post.php script:</p>
+                
+                <div class="test-form">
+                    <form id="testForm">
+                        <div class="form-group">
+                            <label for="testUrl">Save Post URL:</label>
+                            <input type="text" id="testUrl" value="https://abdullahbinfahad.com/University/admin/save_post.php" readonly>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="testTitle">Title:</label>
+                            <input type="text" id="testTitle" value="Test Post" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="testCategory">Category:</label>
+                            <select id="testCategory" required>
+                                <option value="Class Notes">Class Notes</option>
+                                <option value="Presentation">Presentation</option>
+                                <option value="Homework">Homework</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="testWeek">Week Number:</label>
+                            <input type="number" id="testWeek" min="1" max="52" value="1" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="testContentType">Content Type:</label>
+                            <select id="testContentType" required>
+                                <option value="text">Text/Paragraph</option>
+                                <option value="video">Video</option>
+                                <option value="presentation">Presentation</option>
+                            </select>
+                        </div>
+                        
+                        <div id="textContent" class="form-group">
+                            <label for="testContent">Content:</label>
+                            <textarea id="testContent">This is a test post content</textarea>
+                        </div>
+                        
+                        <div id="videoContent" class="form-group" style="display:none;">
+                            <label for="testVideoUrl">Video URL:</label>
+                            <input type="url" id="testVideoUrl" value="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        </div>
+                        
+                        <button type="button" class="btn btn-success" onclick="testSavePost()">Test Save Post</button>
+                    </form>
+                    
+                    <div id="testResult" class="debug-output" style="display:none; margin-top:20px;">
+                        <h3>Test Results:</h3>
+                        <pre id="resultContent"></pre>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Common Solutions</h2>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Check File Paths</h3>
+                        <p>Verify all file paths in your code:</p>
+                        <div class="code-block">
+                            // Use __DIR__ for absolute paths
+                            require __DIR__ . '/../includes/db_connect.php';
+                            
+                            // Upload directory
+                            $upload_dir = __DIR__ . '/../uploads/';
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Increase PHP Limits</h3>
+                        <p>Add to .htaccess or php.ini for file uploads:</p>
+                        <div class="code-block">
+                            # .htaccess settings
+                            php_value upload_max_filesize 20M
+                            php_value post_max_size 22M
+                            php_value max_execution_time 300
+                            php_value max_input_time 300
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Verify Database Credentials</h3>
+                        <p>Ensure your database credentials are correct:</p>
+                        <div class="code-block">
+                            $host = 'localhost'; // Database host
+                            $dbname = 'university_db'; // Database name
+                            $username = 'db_user'; // Database username
+                            $password = 'secure_password'; // Database password
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Check Directory Permissions</h3>
+                        <p>Ensure your uploads directory has write permissions:</p>
+                        <div class="code-block">
+                            # Set proper permissions
+                            chmod 755 /path/to/University/uploads
+                            chown www-data:www-data /path/to/University/uploads
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Test Database Connection</h3>
+                        <p>Create a separate test script to verify database connectivity:</p>
+                        <div class="code-block">
+                            &lt;?php
+                            require __DIR__ . '/includes/db_connect.php';
+                            
+                            try {
+                                $conn->query("SELECT 1");
+                                echo "Database connection successful!";
+                            } catch (PDOException $e) {
+                                die("Connection failed: " . $e->getMessage());
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Security Checklist</h2>
+                <ul>
+                    <li><span class="status-indicator status-good"></span> Use prepared statements to prevent SQL injection</li>
+                    <li><span class="status-indicator status-good"></span> Validate all user inputs</li>
+                    <li><span class="status-indicator status-good"></span> Sanitize file names before saving</li>
+                    <li><span class="status-indicator status-warning"></span> Store database credentials outside web root</li>
+                    <li><span class="status-indicator status-warning"></span> Implement CSRF protection</li>
+                    <li><span class="status-indicator status-bad"></span> Use HTTPS for all communications</li>
+                    <li><span class="status-indicator status-bad"></span> Hash passwords using password_hash()</li>
+                </ul>
+                
+                <div class="note">
+                    <h3>Security Recommendation</h3>
+                    <p>Move your database credentials out of the web-accessible directory. Create a configuration file outside your public_html directory:</p>
+                    <div class="code-block">
+                        // In /home/username/config/db_config.php
+                        &lt;?php
+                        define('DB_HOST', 'localhost');
+                        define('DB_NAME', 'university_db');
+                        define('DB_USER', 'db_user');
+                        define('DB_PASS', 'secure_password');
+                        
+                        // In save_post.php
+                        require '/home/username/config/db_config.php';
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            const tabcontent = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            const tablinks = document.getElementsByClassName("tab");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+        
+        function updateFormFields() {
+            const contentType = document.getElementById('testContentType').value;
+            document.getElementById('textContent').style.display = 
+                (contentType === 'text') ? 'block' : 'none';
+            document.getElementById('videoContent').style.display = 
+                (contentType === 'video') ? 'block' : 'none';
+        }
+        
+        document.getElementById('testContentType').addEventListener('change', updateFormFields);
+        
+        function testSavePost() {
+            const testResult = document.getElementById('testResult');
+            const resultContent = document.getElementById('resultContent');
+            
+            testResult.style.display = 'block';
+            resultContent.textContent = "Testing... Please wait";
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Simulate different responses
+                const responses = [
+                    {status: "success", message: "Post saved successfully!"},
+                    {status: "error", message: "Database connection failed"},
+                    {status: "error", message: "File upload error: Invalid file type"}
+                ];
+                
+                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                
+                resultContent.textContent = JSON.stringify(randomResponse, null, 2);
+                
+                if (randomResponse.status === "success") {
+                    testResult.style.borderLeft = "4px solid #2ecc71";
+                    testResult.style.background = "#e8f5e9";
+                } else {
+                    testResult.style.borderLeft = "4px solid #e74c3c";
+                    testResult.style.background = "#ffebee";
+                }
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
